@@ -22,9 +22,34 @@ function displayQuizInfo(indx) {
     const quizContainer = document.getElementById("displayInfo");
     let quizContnt = `
        <div class = "question">${indx + 1}. ${quizInfo[indx].ques}</div>
+        <ul class = "options">
+            ${quizInfo[indx].choices.map((optn, m) => `                 
+                <li>
+                    <label>
+                        <input type = "radio" name = "ques${indx}" value = "${m}">
+                        ${optn}
+                    </label>
+                </li>
+            `).join('')}
+        </ul>
     `;
     quizContainer.innerHTML = quizContnt;
+    updateButtons();
 }
+
+function updateButtons() {
+    document.getElementById("backBtn").disabled = currentIndx === 0;
+    document.getElementById("nextBtn").disabled = currentIndx === quizInfo.length - 1;
+
+}
+
+function nextInfo() {
+    if (currentIndx < quizInfo.length -1) {
+        currentIndx++;
+        displayQuizInfo(currentIndx);
+    }
+}
+
 
 window.addEventListener('load', () => {
     displayQuizInfo(currentIndx);
