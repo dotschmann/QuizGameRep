@@ -47,7 +47,13 @@ function displayQuizInfo(indx) {
 
 function updateButtons() {
     document.getElementById("backBtn").disabled = currentIndx === 0;
-    document.getElementById("nextBtn").disabled = currentIndx === quizInfo.length - 1;
+    if (currentIndx === quizInfo.length - 1) {
+        document.getElementById("nextBtn").style.display = "none";
+        document.getElementById("resultBtn").style.display = "inline-block";
+    } else {
+        document.getElementById("nextBtn").style.display = "inline-block";
+        document.getElementById("resultBtn").style.display = "none";
+    }
 
 }
 
