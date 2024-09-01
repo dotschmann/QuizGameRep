@@ -50,6 +50,13 @@ function nextInfo() {
     }
 }
 
+function previousInfo() {
+    if (currentIndx > 0) {
+        currentIndx--;
+        displayQuizInfo(currentIndx);
+    }
+}
+
 
 window.addEventListener('load', () => {
     displayQuizInfo(currentIndx);
