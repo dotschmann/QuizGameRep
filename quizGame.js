@@ -17,6 +17,7 @@ const quizInfo = [
 ];
 
 let currentIndx = 0;
+let choiceSelected = new Array(quizInfo.length).fill(null);
 
 function displayQuizInfo(indx) {
     const quizContainer = document.getElementById("displayInfo");
@@ -26,7 +27,7 @@ function displayQuizInfo(indx) {
             ${quizInfo[indx].choices.map((optn, m) => `                 
                 <li>
                     <label>
-                        <input type = "radio" name = "ques${indx}" value = "${m}">
+                        <input type = "radio" name = "ques${indx}" value = "${m}" ${choiceSelected[indx] === m ? 'checked' : ' '}>
                         ${optn}
                     </label>
                 </li>
@@ -35,6 +36,13 @@ function displayQuizInfo(indx) {
     `;
     quizContainer.innerHTML = quizContnt;
     updateButtons();
+
+    const radioBtns = quizContainer.querySelectorAll(`input[name="ques${indx}"]`);
+    radioBtns.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            choiceSelected[indx] = parseInt(e.target.value);
+        });
+    });
 }
 
 function updateButtons() {
