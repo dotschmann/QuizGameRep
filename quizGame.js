@@ -89,6 +89,16 @@ function submitQuiz() {
     document.getElementById("backBtn").style.display = "none";
 }
 
+function restartBtn() {
+    currentIndx = 0;
+    choiceSelected = new Array(quizInfo.length).fill(null)
+    displayQuizInfo(currentIndx)
+    document.getElementById("backBtn").style.display = "inline-block";
+    document.getElementById("restartBtn").style.display = "none";
+
+}
+
+
 
 window.addEventListener('load', () => {
     displayQuizInfo(currentIndx);
