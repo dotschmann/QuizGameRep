@@ -82,9 +82,11 @@ function submitQuiz() {
         }
     });
 
+    document.getElementById("restartBtn").style.display = "inline-block";
     document.getElementById('score').innerText = `You score ${score} out of ${quizInfo.length}`;
     document.getElementById("resultBtn").style.display = "none";
     document.getElementById("score").style.display = "inline-block";
+    document.getElementById("backBtn").style.display = "none";
 }
 
 
