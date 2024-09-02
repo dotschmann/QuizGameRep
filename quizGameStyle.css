@@ -50,3 +50,8 @@ button:hover:not(:disabled) {
 .options li {
     margin-bottom: 10px;
 }
+
+#score {
+    text-align: center;
+    align-content: center;
+}
