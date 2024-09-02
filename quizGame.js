@@ -93,16 +93,18 @@ function restartBtn() {
     currentIndx = 0;
     choiceSelected = new Array(quizInfo.length).fill(null)
     displayQuizInfo(currentIndx)
-    document.getElementById("backBtn").style.display = "inline-block";
+ 
     document.getElementById("restartBtn").style.display = "none";
+    document.getElementById("info-container1").style.display = "none";
+    document.getElementById("intro1").style.display = "block";
 
 }
 
 function playNow() {
     document.getElementById("intro1").style.display = "none";
-        displayQuizInfo(currentIndx);
-   
+    displayQuizInfo(currentIndx);
     document.getElementById("info-container1").style.display = "inline-block";
+    document.getElementById("backBtn").style.display = "inline-block";
 }
 
 

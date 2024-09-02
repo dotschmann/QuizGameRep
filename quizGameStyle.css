@@ -56,10 +56,7 @@ button:hover:not(:disabled) {
     align-content: center;
 }
 
-#playNow {
-    display: flex;
-    justify-content: center;
-}
+
 .intro {
     display: flex;
     flex-direction: column;
