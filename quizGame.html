@@ -9,17 +9,20 @@
 <body>
     <div class="intro" id="intro1">
         <p>Press button to begin the game</p>
-        <button id="playNow" onclick="playNow()">PLAY NOW!</button>
+        <button id="playNow">PLAY NOW!</button>
     </div>
-
+    <div class="startContainer" id="startContainer" style="display: none;">
+        <button type="button" id="startBtn">START!</button>
+        <button type="button" id="endBtn">EXIT!</button>
+    </div>
     <div class="info-container" id="info-container1" style="display: none;">
         <div id="displayInfo"></div>
         <div class="buttons">
-            <button id="backBtn" onclick="previousInfo()">Back</button>
-            <button id="nextBtn" onclick="nextInfo()">Next</button>
-            <button id="restartBtn" style="display: none;" onclick="restartBtn()">Restart</button>
+            <button id="backBtn">Back</button>
+            <button id="nextBtn">Next</button>
+            <button id="restartBtn" style="display: none;">Restart</button>
             <div id="score" style="display: none;"></div>
-            <button id="resultBtn" onclick="submitQuiz()" style="display: none;">Show result</button>
+            <button id="resultBtn">Show result</button>
         </div>     
     </div>
 

@@ -68,3 +68,29 @@ button:hover:not(:disabled) {
 .intro p {
     text-transform: uppercase;
 }
+
+.startContainer button{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 100px;
+}
+
+#endBtn {
+    background-color: rgb(161, 29, 29);
+}
+
+#endBtn:hover {
+    background-color: rgb(125, 11, 11);
+}
+
+#resultBtn {
+    background-color: rgb(9, 159, 9);
+    
+}
+#resultBtn:hover {
+    background-color: rgb(9, 92, 9);
+    
+}

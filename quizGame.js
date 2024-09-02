@@ -90,22 +90,35 @@ function submitQuiz() {
 }
 
 function restartBtn() {
-    currentIndx = 0;
     choiceSelected = new Array(quizInfo.length).fill(null)
-    displayQuizInfo(currentIndx)
- 
     document.getElementById("restartBtn").style.display = "none";
     document.getElementById("info-container1").style.display = "none";
     document.getElementById("intro1").style.display = "block";
 
 }
 
-function playNow() {
+function playNow() { 
+    document.getElementById("startContainer").style.display = "block";
     document.getElementById("intro1").style.display = "none";
-    displayQuizInfo(currentIndx);
-    document.getElementById("info-container1").style.display = "inline-block";
-    document.getElementById("backBtn").style.display = "inline-block";
 }
 
 
+document.getElementById("playNow").addEventListener('click', playNow);
+document.getElementById("backBtn").addEventListener('click', previousInfo);
+document.getElementById("nextBtn").addEventListener('click', nextInfo);
+document.getElementById("restartBtn").addEventListener('click', restartBtn);
+document.getElementById("resultBtn").addEventListener('click', submitQuiz);
 
+document.getElementById("startBtn").addEventListener('click', () =>{
+    currentIndx = 0;
+    document.getElementById("intro1").style.display = "none";
+    document.getElementById("startContainer").style.display = "none";
+    displayQuizInfo(currentIndx);
+    document.getElementById("info-container1").style.display = "inline-block";
+    document.getElementById("backBtn").style.display = "inline-block";
+});
+
+document.getElementById("endBtn").addEventListener('click', () => {
+    document.getElementById("intro1").style.display = "block";
+    document.getElementById("startContainer").style.display = "none";
+});
