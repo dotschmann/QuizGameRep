@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="info-container">
+    <div class="intro" id="intro1">
+        <p>Press button to begin the game</p>
+        <button id="playNow" onclick="playNow()">PLAY NOW!</button>
+    </div>
+
+    <div class="info-container" id="info-container1" style="display: none;">
         <div id="displayInfo"></div>
         <div class="buttons">
             <button id="backBtn" onclick="previousInfo()">Back</button>
@@ -17,6 +22,7 @@
             <button id="resultBtn" onclick="submitQuiz()" style="display: none;">Show result</button>
         </div>     
     </div>
+
 
     <script src="quizGame.js"></script>
 </body>

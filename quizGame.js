@@ -98,8 +98,12 @@ function restartBtn() {
 
 }
 
+function playNow() {
+    document.getElementById("intro1").style.display = "none";
+        displayQuizInfo(currentIndx);
+   
+    document.getElementById("info-container1").style.display = "inline-block";
+}
 
 
-window.addEventListener('load', () => {
-    displayQuizInfo(currentIndx);
-});
+

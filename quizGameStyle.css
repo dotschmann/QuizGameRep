@@ -55,3 +55,19 @@ button:hover:not(:disabled) {
     text-align: center;
     align-content: center;
 }
+
+#playNow {
+    display: flex;
+    justify-content: center;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro p {
+    text-transform: uppercase;
+}
