@@ -42,12 +42,12 @@ button:hover:not(:disabled) {
     background-color: #0056b3;
 }
 
-.options {
+.choices {
     list-style: none;
     padding: 0;
 }
 
-.options li {
+.choices li {
     margin-bottom: 10px;
 }
 
@@ -69,13 +69,13 @@ button:hover:not(:disabled) {
     text-transform: uppercase;
 }
 
-.startContainer button{
+.startContainer button, .scoreRestart button {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     margin: 20px;
-    width: 100px;
+    width: 103.79px;
 }
 
 #endBtn {
@@ -93,4 +93,12 @@ button:hover:not(:disabled) {
 #resultBtn:hover {
     background-color: rgb(9, 92, 9);
     
+}
+
+.scoreRestart {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 }

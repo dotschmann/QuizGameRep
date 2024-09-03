@@ -13,6 +13,26 @@ const quizInfo = [
         ques: "What is the capital city of Japan?",
         choices: ["Kyoto", "Osaka", "Nagoya", "Tokyo"],
         answer: 3
+    },
+    {
+        ques: "Which planet is closest to the Sun?",
+        choices: ["Venus", "Earth", "Mercury", "Mars"],
+        answer: 2
+    },
+    {
+        ques: "What is the main ingredient in guacamole?",
+        choices: ["Tomato", "Onion", "Avocado", "Pepper"],
+        answer: 2
+    },
+    {
+        ques: "Which element does 'O' represent on the periodic table?",
+        choices: ["Osmium", "Oxygen", "Gold", "Oganesson"],
+        answer: 1
+    },
+    {
+        ques: "What is the currency of the United Kingdom?",
+        choices: ["Dollar", "Euro", "Pound Sterling", "Yen"],
+        answer: 2
     }
 ];
 
@@ -22,8 +42,8 @@ let choiceSelected = new Array(quizInfo.length).fill(null);
 function displayQuizInfo(indx) {
     const quizContainer = document.getElementById("displayInfo");
     let quizContnt = `
-       <div class = "question">${indx + 1}. ${quizInfo[indx].ques}</div>
-        <ul class = "options">
+       <div class = "ques">${indx + 1}. ${quizInfo[indx].ques}</div>
+        <ul class = "choices">
             ${quizInfo[indx].choices.map((optn, m) => `                 
                 <li>
                     <label>
@@ -76,17 +96,19 @@ function previousInfo() {
 function submitQuiz() {
     let score = 0;
 
-    quizInfo.forEach((question, m) => {
-        if(choiceSelected[m] === question.answer) {
+    quizInfo.forEach((ques, m) => {
+        if(choiceSelected[m] === ques.answer) {
             score++;
         }
     });
 
-    document.getElementById("restartBtn").style.display = "inline-block";
+    
+    document.getElementById("info-container1").style.display = "none";
+    document.getElementById("restartBtn").style.display = "block";
+    document.getElementById("scoreRestart").style.display = "block";
     document.getElementById('score').innerText = `You score ${score} out of ${quizInfo.length}`;
-    document.getElementById("resultBtn").style.display = "none";
-    document.getElementById("score").style.display = "inline-block";
-    document.getElementById("backBtn").style.display = "none";
+    document.getElementById("score").style.display = "block";
+   
 }
 
 function restartBtn() {
@@ -94,6 +116,7 @@ function restartBtn() {
     document.getElementById("restartBtn").style.display = "none";
     document.getElementById("info-container1").style.display = "none";
     document.getElementById("intro1").style.display = "block";
+    document.getElementById("scoreRestart").style.display = "none";
 
 }
 
@@ -116,8 +139,13 @@ document.getElementById("startBtn").addEventListener('click', () =>{
     displayQuizInfo(currentIndx);
     document.getElementById("info-container1").style.display = "inline-block";
     document.getElementById("backBtn").style.display = "inline-block";
+    document.getElementById("score").style.display = "none";
 });
 
+document.getElementById("endBtn").addEventListener('click', () => {
+    document.getElementById("intro1").style.display = "block";
+    document.getElementById("startContainer").style.display = "none";
+});
 document.getElementById("endBtn").addEventListener('click', () => {
     document.getElementById("intro1").style.display = "block";
     document.getElementById("startContainer").style.display = "none";
