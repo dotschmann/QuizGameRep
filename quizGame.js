@@ -116,10 +116,12 @@ function restartBtn() {
     choiceSelected = new Array(quizInfo.length).fill(null)
     document.getElementById("restartBtn").style.display = "none";
     document.getElementById("info-container1").style.display = "none";
-    document.getElementById("intro1").style.display = "block";
+    document.getElementById("intro1").style.display = "block"; 
+    document.getElementById("enterName").style.display = "flex"; 
+    document.getElementById("main").style.display = "none"; 
     document.getElementById("scoreRestart").style.display = "none";
     document.getElementById("endGame").style.display = "none";
-
+    document.getElementById("playerName").value = "";
 }
 
 function playNow() { 
@@ -150,13 +152,14 @@ document.getElementById("startBtn").addEventListener('click', () =>{
 });
 
 document.getElementById("endBtn").addEventListener('click', () => {
-    document.getElementById("intro1").style.display = "block";
+    document.getElementById("enterName").style.display = "flex";
+    document.getElementById("main").style.display = "none";
     document.getElementById("startContainer").style.display = "none";
-});
-document.getElementById("endBtn").addEventListener('click', () => {
+    document.getElementById("playerName").value = "";
     document.getElementById("intro1").style.display = "block";
-    document.getElementById("startContainer").style.display = "none";
 });
+
+
 
 function WelcomeMsg() {
     let playerName = document.getElementById("playerName").value;

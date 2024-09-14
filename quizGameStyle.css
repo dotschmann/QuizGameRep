@@ -169,7 +169,6 @@ button:hover:not(:disabled) {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* background-color: #5a041e; */
     align-items: center;
     text-align: center;
 }
