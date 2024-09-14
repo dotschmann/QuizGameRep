@@ -108,6 +108,7 @@ function submitQuiz() {
     document.getElementById("scoreRestart").style.display = "block";
     document.getElementById('score').innerText = `You score ${score} out of ${quizInfo.length}`;
     document.getElementById("score").style.display = "block";
+    document.getElementById("endGame").style.display = "none";
    
 }
 
@@ -117,12 +118,16 @@ function restartBtn() {
     document.getElementById("info-container1").style.display = "none";
     document.getElementById("intro1").style.display = "block";
     document.getElementById("scoreRestart").style.display = "none";
+    document.getElementById("endGame").style.display = "none";
 
 }
 
 function playNow() { 
     document.getElementById("startContainer").style.display = "block";
+    
     document.getElementById("intro1").style.display = "none";
+    document.getElementById("endGame").style.display = "none";
+    
 }
 
 
@@ -130,6 +135,7 @@ document.getElementById("playNow").addEventListener('click', playNow);
 document.getElementById("backBtn").addEventListener('click', previousInfo);
 document.getElementById("nextBtn").addEventListener('click', nextInfo);
 document.getElementById("restartBtn").addEventListener('click', restartBtn);
+document.getElementById("restartBtn1").addEventListener('click', restartBtn);
 document.getElementById("resultBtn").addEventListener('click', submitQuiz);
 
 document.getElementById("startBtn").addEventListener('click', () =>{
@@ -137,6 +143,7 @@ document.getElementById("startBtn").addEventListener('click', () =>{
     document.getElementById("intro1").style.display = "none";
     document.getElementById("startContainer").style.display = "none";
     displayQuizInfo(currentIndx);
+    document.getElementById("endGame").style.display = "block";
     document.getElementById("info-container1").style.display = "inline-block";
     document.getElementById("backBtn").style.display = "inline-block";
     document.getElementById("score").style.display = "none";

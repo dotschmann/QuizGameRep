@@ -7,44 +7,49 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="h-container">
-        <div class="header">
-            <h2><a id="homeLink" href="quizGame.html">LooTo</a></h2>
+        <div class="h-container">
+            <div class="header">
+                <h2><a id="homeLink" href="quizGame.html">LooTo</a></h2>
+            </div>
         </div>
-    </div>
+        
+        <div class="wrappper">
+            <div class="intro" id="intro1">
+                <div class="main1">
+                    <p>Press button to begin the game</p>
+                </div>
+                <div class="main2">
+                    <button id="playNow">PLAY NOW!</button>
+                </div>
+            </div>
+            <div class="startContainer" id="startContainer" style="display: none;">
+                <button type="button" id="startBtn">START!</button>
+                <button type="button" id="endBtn">EXIT!</button>
+            </div>
+            <div class="info-container" id="info-container1" style="display: none;">
+                <div id="displayInfo"></div>
+                <div class="buttons">
+                    <button id="backBtn">Back</button>
+                 
+                    <button id="nextBtn">Next</button>
+                    <button id="resultBtn" style="display: none;">Show result</button>
+                </div>     
+              
+            </div>
+            <div class="endGame" id="endGame" style="display: none;">
+                <button id="restartBtn1">End Game</button>
+            </div>
+            <div class="scoreRestart" id="scoreRestart" style="display: none;">
+                <div id="score"></div> 
+                <button id="restartBtn">End Game</button>
+            </div>
+        </div>
     
-    <div class="wrappper">
-        <div class="intro" id="intro1">
-            <div class="main1">
-                <p>Press button to begin the game</p>
-            </div>
-            <div class="main2">
-                <button id="playNow">PLAY NOW!</button>
+        <div class="f-container">
+            <div class="footer">
+                <p>© 2024 LooTo. All rights reserved</p>
             </div>
         </div>
-        <div class="startContainer" id="startContainer" style="display: none;">
-            <button type="button" id="startBtn">START!</button>
-            <button type="button" id="endBtn">EXIT!</button>
-        </div>
-        <div class="info-container" id="info-container1" style="display: none;">
-            <div id="displayInfo"></div>
-            <div class="buttons">
-                <button id="backBtn">Back</button>
-                <button id="nextBtn">Next</button>
-                <button id="resultBtn" style="display: none;">Show result</button>
-            </div>     
-        </div>
-        <div class="scoreRestart" id="scoreRestart" style="display: none;">
-            <div id="score"></div> 
-            <button id="restartBtn">End Game</button>
-        </div>
-    </div>
-
-    <div class="f-container">
-        <div class="footer">
-            <p>© 2024 LooTo. All rights reserved</p>
-        </div>
-    </div>
     <script src="quizGame.js"></script>
 </body>
 </html>

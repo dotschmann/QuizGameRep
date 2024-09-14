@@ -9,6 +9,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .wrappper {
     display: flex;
     flex-direction: column;
@@ -20,7 +21,7 @@ body {
 
 .info-container {
     border: 1px solid #1E0342;
-    width: 25%;
+    width: 35%;
     padding: 20px;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
@@ -161,4 +162,13 @@ button:hover:not(:disabled) {
     
     text-align: center;
     padding: 10px;
+}
+
+.endGame {
+    margin-top: 20px;
+}
+
+.endGame button {
+    background-color: #5a041e;
+    border: 1px solid #5a041e;
 }
