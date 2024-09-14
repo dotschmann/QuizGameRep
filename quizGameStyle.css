@@ -9,7 +9,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .wrappper {
     display: flex;
     flex-direction: column;
@@ -41,7 +40,6 @@ button {
     border: 1px solid #1E0342;    
     padding: 12px 20px;
     cursor: pointer;
-
 }
 
 button:disabled {
@@ -49,6 +47,7 @@ button:disabled {
     cursor: not-allowed;
     border: 1px solid #cccccc;
 }
+
 button:hover:not(:disabled) {
     background-color:#0E46A3;
     border: 1px solid #1E0342;
@@ -71,7 +70,6 @@ button:hover:not(:disabled) {
     text-align: center;
     align-content: center;
 }
-
 
 .intro {
     display: flex;
@@ -107,14 +105,12 @@ button:hover:not(:disabled) {
 
 #resultBtn {
     background-color: rgb(9, 159, 9);
-    border: 1px solid rgb(9, 159, 9);
-
-    
+    border: 1px solid rgb(9, 159, 9);   
 }
+
 #resultBtn:hover {
     background-color:#0E46A3;
-    border: 1px solid rgb(9, 159, 9);
-  
+    border: 1px solid rgb(9, 159, 9); 
 }
 
 .scoreRestart {
@@ -138,6 +134,7 @@ button:hover:not(:disabled) {
     text-decoration: none;
     color: White;
 }
+
 .f-container {
     display: flex;
     height: 10vh;
@@ -146,6 +143,10 @@ button:hover:not(:disabled) {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+}
+
+#main {
+    display: none;
 }
 
 .main1 {
@@ -157,11 +158,28 @@ button:hover:not(:disabled) {
 
 .main1 > p {
    padding: 16px;
-}
-.main2 {
-    
+}  
+
+.main2 {    
     text-align: center;
     padding: 10px;
+}
+
+.main3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: #5a041e; */
+    align-items: center;
+    text-align: center;
+}
+
+.main3 button {
+    padding: 15px 30px;
+}
+
+.main3 input {
+    padding: 5px;
 }
 
 .endGame {
@@ -172,3 +190,6 @@ button:hover:not(:disabled) {
     background-color: #5a041e;
     border: 1px solid #5a041e;
 }
+
+
+

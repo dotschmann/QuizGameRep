@@ -157,3 +157,15 @@ document.getElementById("endBtn").addEventListener('click', () => {
     document.getElementById("intro1").style.display = "block";
     document.getElementById("startContainer").style.display = "none";
 });
+
+function WelcomeMsg() {
+    let playerName = document.getElementById("playerName").value;
+
+    let message = `Hello ${playerName}! Welcome to LooTo Quiz Game\n\nPress button below to begin the game!`
+
+    document.getElementById("message").innerText = message;
+    document.getElementById("main").style.display = "block";
+    document.getElementById("enterName").style.display = "none";
+}
+
+document.getElementById("WelcomeBtn").addEventListener('click', WelcomeMsg);
